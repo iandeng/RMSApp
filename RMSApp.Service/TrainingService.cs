@@ -21,7 +21,7 @@ namespace RMSApp.Service
         public BookingResult CreateTrainingBooking(string name, DateTime startDate, DateTime endDate)
         {
             var minDate = new DateTime(1970, 01, 01);
-            if (string.IsNullOrEmpty(name) || startDate == minDate || endDate == minDate)
+            if (string.IsNullOrEmpty(name) || startDate <= minDate || endDate <= minDate)
             {
                 return new BookingResult()
                 {
@@ -47,7 +47,7 @@ namespace RMSApp.Service
             var trainingDuration = (endDate - startDate).Days + 1;
             return new BookingResult()
             {
-                Message = $"The training has been booked successfully. Training duration: {trainingDuration} days",
+                Message = $"The training has been booked successfully. Training duration: {trainingDuration} days.",
                 TrainingDurationInDays = trainingDuration,
                 IsSuccess = true
             };
