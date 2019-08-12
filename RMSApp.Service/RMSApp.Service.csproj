@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RMSApp.Contracts\RMSApp.Contracts.csproj" />
+    <ProjectReference Include="..\RMSApp.Repositories\RMSApp.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
