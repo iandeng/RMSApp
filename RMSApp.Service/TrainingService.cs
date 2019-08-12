@@ -43,6 +43,7 @@ namespace RMSApp.Service
                 StartDate = startDate,
                 EndDate = endDate
             });
+            _context.SaveChanges();
 
             var trainingDuration = (endDate - startDate).Days + 1;
             return new BookingResult()
